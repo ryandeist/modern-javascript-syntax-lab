@@ -148,3 +148,70 @@ const pizzaToppings = ['Pineapple', 'Olives', 'Anchovies'];
 
 // Your code here
 ```
+
+## Review: Applying the spread operator on objects
+The spread operator can also be applied to objects:
+
+```
+const originalObject = {
+  foo: 'Hello',
+  bar: 100,
+};
+
+const clonedObject = { ...originalObject };
+console.log('Clone: ', clonedObject); // { foo: 'Hello', bar: 100 }
+```
+
+In the example above, we can see how the properties of `originalObject` have been copied over into a new object called `clonedObject`.
+
+The use of the spread operator here differs significantly from direct assignment:
+
+```
+const originalObject = {
+  foo: 'Hello',
+  bar: 100,
+};
+
+const clonedObject = originalObject;
+clonedObject.foo = 'Goodbye';
+
+console.log(originalObject); // { foo: 'Goodbye', bar: 100 }
+```
+
+The example above demonstrates a pitfall of attempting to clone an object **without the spread operator**. When `clonedObject` is assigned `originalObject` directly, it doesn’t actually create a new, independent object. Instead, `clonedObject` becomes a reference to `originalObject`. This means any changes made to `clonedObject` also affect `originalObject`, as they both point to the same data.
+
+Like with Arrays, this issue can be remedied when we apply the spread operator:
+
+```
+const originalObject = {
+  foo: 'Hello',
+  bar: 100,
+};
+
+// Copy the properties of originalObject:
+const clonedObject = { ...originalObject };
+
+// Update the properties of clonedObject:
+clonedObject.foo = 'Goodbye';
+clonedObject.bar = 0;
+
+console.log('Original: ', originalObject); // { foo: 'Hello', bar: 100 }
+console.log('Clone: ', clonedObject); // { foo: 'Goodbye', bar: 0 }
+```
+
+With the spread operator, `clonedObject` is a brand new object, with its own separate copy of the data from `originalObject`. Now, modifying `clonedObject` will not impact the `originalObject`
+
+### Exercise 5: Applying the spread operator on objects
+
+```
+// Duplicate the following object and spread its values into a new variable `myCar`.
+
+const car = {
+  make: 'Audi',
+  model: 'q5',
+};
+
+// Change the `model` property of `myCar` to 'q7'. Log both objects.
+
+// Your code here
+```
