@@ -64,3 +64,40 @@ const pizzaToppings = ['Pineapple', 'Olives', 'Anchovies'];
 
 // Your code here
 ```
+
+## Review: Object Destructuring
+Destructuring can also be applied to objects. With object destructuring, we can extract properties from an object. Instead of accessing properties through dot notation or bracket notation, the values of specific properties in an object can be assigned to variables.
+
+```
+const person = {
+  name: 'Alex',
+  role: 'Software Engineer',
+};
+
+// Object destructuring:
+const { name, role } = person;
+
+console.log(name); // 'Alex'
+console.log(role); // 'Software Engineer'
+
+// Equivalent in traditional dot notation:
+console.log(person.name); // 'Alex'
+console.log(person.role); // 'Software Engineer'
+```
+
+In the example above, the `person` object is deconstructed to extract the `name` and `role` properties. This approach allows us to access the values of `name` and `role` without having to use dot notation for each property.
+
+> Unlike array destructuring, where elements are matched based on their position, the variables created in object destructuring, such as `const { name, role }`, need to match the names of existing properties in the object.
+
+### Exercise 3: Destructuring objects
+
+```
+// Given the following object, use destructuring to create variables `make` and `model` that will hold the respective values.
+
+const car = {
+  make: 'Audi',
+  model: 'q5',
+};
+
+// Your code here
+```
