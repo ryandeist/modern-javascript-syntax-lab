@@ -32,3 +32,35 @@ const nums = [13, 87, 2, 89, 12, 4, 90, 63];
 
 // Your code here
 ```
+
+## Array Destructuring
+Array destructuring in JavaScript is a way of unpacking the elements of an array. With array destructuring, we can extract elements from an array and store them in variables with a single line of code.
+
+When we destructure an array, the elements are matched positionally with the variables we define, meaning the order in which we declare variables corresponds with the order of elements in the array.
+
+```
+const petsArray = ['Rover', 'Snuffles', 'Toto', 'Spot'];
+
+const [firstPet, secondPet] = petsArray;
+
+console.log(firstPet); // 'Rover'
+console.log(secondPet); // 'Snuffles'
+
+// Equivalent in traditional bracket notation:
+console.log(petsArray[0]); // 'Rover'
+console.log(petsArray[1]); // 'Snuffles'
+```
+
+In the example above, the first two elements of `petsArray` are unpacked into `firstPet` and `secondPet`.
+
+> You have full control of the variable names!
+
+### Exercise 2: Array Destructuring
+
+```
+// Given the following array, use destructuring to pull out the first and second values and place them into variables. Log both variables.
+
+const pizzaToppings = ['Pineapple', 'Olives', 'Anchovies'];
+
+// Your code here
+```
