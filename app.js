@@ -102,7 +102,20 @@ function describeNoun(noun = 'cat', adjective = 'white') {
 describeNoun();
 describeNoun('pencil', 'black');
 
+// Exercise 9: Ternary Operator
 
+// Convert the following `if...else` statement in to a ternary:
+
+let pizza = 'tasty';
+
+// if (pizza === 'tasty') {
+//   console.log('yum');
+// } else {
+//   console.log('yuck');
+// }
+
+// Your code here
+console.log(pizza === 'tasty' ? 'yum' : 'yuck');
 
 
 
