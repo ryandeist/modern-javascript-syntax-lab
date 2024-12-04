@@ -352,6 +352,59 @@ import name, { age, job } from './exportingFile.js';
 console.log(name, age, job);
 ```
 
+## Review: Default parameters
+Default parameters are just that - default values for parameters. These defaults are applied when no value is passed for those parameters during a function call.
+
+Take this example:
+
+```
+function addThreeNumbers(numA, numB, numC) {
+  return numA + numB + numC;
+}
+
+addThreeNumbers(2);
+```
+
+This will return `NaN`, because the value of `numB` and `numC` are both `undefined`. Let’s apply some defaults to the `numB` and `numC` parameters:
+
+```
+function addThreeNumbers(numA, numB = 2, numC = 1) {
+  return numA + numB + numC;
+}
+
+addThreeNumbers(2);
+```
+
+Now this function will return the number `5`. What if we also give a default to `numA`?
+
+```
+function addThreeNumbers(numA = 1, numB = 2, numC = 1) {
+  return numA + numB + numC;
+}
+
+addThreeNumbers(2);
+```
+
+This function is still going to return the number `5`. The default value of `1` on `numA` will be overridden by the passed in value of `2`.
+
+### Exercise 8: Default parameters
+
+```
+// Create a function that takes two parameters, `noun` and `adjective`, both with the following respective default values:
+
+// 1. `cat`
+
+// 2. `white`
+
+// The function should log a sentence 'The cat is white.' by default. The function should substitute the appropriate parameters when supplied arguments.
+
+// Your code here
+```
+
+
+
+
+
 
 
 

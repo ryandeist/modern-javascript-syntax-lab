@@ -83,7 +83,26 @@ const userProfile = {
 console.log(userProfile);
 
 // Exercise 7: Apply `import` and `export`
-// see other files.
+// see `exportingFile.js` and `importingFile.js`
+
+// Exercise 8: Default Parameters
+
+// Create a function that takes two parameters, `noun` and `adjective`, both with the following respective default values:
+
+// 1. `cat`
+
+// 2. `white`
+
+// The function should log a sentence 'The cat is white.' by default. The function should substitute the appropriate parameters when supplied arguments.
+
+function describeNoun(noun = 'cat', adjective = 'white') {
+    console.log(`The ${noun} is ${adjective}`);
+}; 
+
+describeNoun();
+describeNoun('pencil', 'black');
+
+
 
 
 
