@@ -82,4 +82,9 @@ const userProfile = {
 
 console.log(userProfile);
 
+// Exercise 7: Apply `import` and `export`
+// see other files.
+
+
+
 
